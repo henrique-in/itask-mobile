@@ -1,20 +1,18 @@
-import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
+import styled from "styled-components/native";
+import { FlatList } from "react-native";
 
 export const Container = styled.View`
   flex: 1;
   background: #ffffff;
   align-items: center;
-  
+  justify-content: flex-start;
 `;
 
 export const Scroll = styled.View`
   width: 100%;
-  height: 66%;
-  align-items:center;
+  height: 65%;
+  align-items: center;
   margin-top: 15px;
-
-  
 `;
 
 export const ViewTitle = styled.View`
@@ -29,9 +27,8 @@ export const Title = styled.Text`
   font-size: 18px;
   position: relative;
   top: 11px;
-  background-color:#fff;
+  background-color: #fff;
   padding: 0 10px;
-
 `;
 
 export const Filter = styled.View`
@@ -40,7 +37,6 @@ export const Filter = styled.View`
   justify-content: space-around;
   height: 60px;
   align-items: center;
- 
 `;
 
 export const FilterBtn = styled.TouchableOpacity``;
@@ -48,8 +44,8 @@ export const FilterBtn = styled.TouchableOpacity``;
 export const FilterTextActive = styled.Text`
   font-weight: bold;
   font-size: 18px;
-  color: ${props => props.actived ?'#FF7811' : '#090909  '};
-  opacity: ${props => props.actived ? 1 : 0.5};
+  color: ${(props) => (props.actived ? "#FF7811" : "#090909  ")};
+  opacity: ${(props) => (props.actived ? 1 : 0.5)};
 `;
 
 export const FilterTextInative = styled.Text`
@@ -62,8 +58,4 @@ export const FilterTextInative = styled.Text`
 export const List = styled(FlatList).attrs({
   showsHorizontalScrollIndicator: false,
   showsVerticalScrollIndicator: false,
-  
-})`
-
-
-`;
+})``;

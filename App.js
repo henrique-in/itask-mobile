@@ -1,18 +1,27 @@
-import { StatusBar } from 'expo-status-bar';
-import React,{useEffect} from 'react';
-import SplashScreen from 'react-native-splash-screen';
+// import { StatusBar } from "expo-status-bar";
+import React, { useEffect } from "react";
+import { StatusBar } from "react-native";
+import SplashScreen from "react-native-splash-screen";
 
-import Home from './src/view/Home';
+import Home from "./src/view/Home";
 
 export default function App() {
-
-useEffect(() => {
-      setTimeout(() => {
-        SplashScreen.hide();
-      }, 1000);
-    }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 1000);
+  }, []);
 
   return (
-      <Home/>
+    <>
+      <StatusBar
+        barStyle="light-content"
+        hidden={false}
+        backgroundColor="#000"
+        translucent={false}
+        networkActivityIndicatorVisible={true}
+      />
+      <Home />
+    </>
   );
 }
