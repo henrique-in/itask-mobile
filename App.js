@@ -4,6 +4,7 @@ import { StatusBar } from "react-native";
 import SplashScreen from "react-native-splash-screen";
 
 import Home from "./src/view/Home";
+import Task from "./src/view/Task";
 
 export default function App() {
   useEffect(() => {
@@ -21,7 +22,7 @@ export default function App() {
         translucent={false}
         networkActivityIndicatorVisible={true}
       />
-      <Home />
+      <Task/>
     </>
   );
 }

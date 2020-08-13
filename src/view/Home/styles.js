@@ -58,4 +58,6 @@ export const FilterTextInative = styled.Text`
 export const List = styled(FlatList).attrs({
   showsHorizontalScrollIndicator: false,
   showsVerticalScrollIndicator: false,
-})``;
+})`
+  width: 100%;
+`;

@@ -84,6 +84,7 @@ const Home = ({ actived }) => {
           <ActivityIndicator color="#FF7811" size={50} />
         ) : (
           <S.List
+            contentContainerStyle={{alignItems:"center"}}
             data={tasks}
             renderItem={({ item }) => (
               <TaskCard

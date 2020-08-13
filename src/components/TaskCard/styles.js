@@ -14,7 +14,7 @@ export const BtnCard = styled.TouchableOpacity`
   flex-direction: row;
   justify-content: space-between;
   padding: 10px;
-  width: 400px;
+  width: 370px;
   height: 80px;
   background: #fff;
   margin: 10px 0px;
