@@ -8,13 +8,17 @@ export const Container = styled.KeyboardAvoidingView`
   justify-content: flex-start;
 `;
 
-export const Form = styled.ScrollView`
+export const Form = styled.ScrollView.attrs({
+  
+  showsVerticalScrollIndicator: false,
+})`
   width:100%;
 `;
 
 export const ViewType = styled.ScrollView.attrs({
   horizontal: true,
   showsHorizontalScrollIndicator: false,
+  
 })`
 
   
@@ -32,7 +36,8 @@ export const TypeIcon = styled.Image`
 
 export const Label = styled.Text`
   color: #707070;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 18px;
   padding: 0 10px;
   margin: 20px 5px;
 `;
@@ -64,6 +69,7 @@ export const inLine = styled.View`
   align-items: center;
   justify-content: space-between;
   padding: 10px;
+  margin-bottom: 60px;
 
 `;
 

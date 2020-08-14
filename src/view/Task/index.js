@@ -1,9 +1,12 @@
 import React,{useState} from 'react';
-import { View } from 'react-native';
-import * as S from './styles';
 
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
+
+import DateTimeInput from '../../components/DateTimeInput';
+
+import * as S from './styles';
 import typeIcons from '../../utils/typeIcons';
 
 const Task = () => {
@@ -27,7 +30,10 @@ const Task = () => {
            
             <S.Label>Detalhes</S.Label>
               <S.InputArea style={{textAlignVertical:'top'}} multiline={true} maxLength={200} placeholder="Detalhes da atividade" />
-            
+              
+              <DateTimeInput type={'date'}/>
+              <DateTimeInput type={'time'}/>
+
             <S.inLine>
               <S.inputLine>
                 <S.Switch 
