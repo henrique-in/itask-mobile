@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { View } from 'react-native';
+import { Alert } from 'react-native';
 
 import DateTimePicker from '@react-native-community/datetimepicker';
 import {isPast, format} from 'date-fns';

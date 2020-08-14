@@ -8,11 +8,15 @@ import bell from "../../assets/icons/bell.png";
 import qrcode from "../../assets/icons/qrcode.png";
 import back from "../../assets/icons/back.png";
 
-const Header = ({ showNotification, showBack, late, pressNotification }) => {
+const Header = ({ showNotification, showBack, late, pressNotification, navigation }) => {
+  function Back(){
+    navigation.navigate('Home');
+  }
+
   return (
     <S.Container>
       {showBack ? (
-        <S.LeftBtn>
+        <S.LeftBtn onPress={Back}>
           <S.LeftIcon source={back} />
         </S.LeftBtn>
       ) : (

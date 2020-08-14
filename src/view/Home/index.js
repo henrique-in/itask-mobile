@@ -8,13 +8,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TaskCard from "../../components/TaskCard";
 
-const Home = ({ actived }) => {
+const Home = ({ actived, navigation }) => {
   const [filter, setFilter] = useState("today");
   const [tasks, setTasks] = useState([]);
   const [load, setLoad] = useState(false);
   const [lateCount, setLateCount] = useState();
 
-  async function loadTasks() {
+  async function loadTasks({}) {
     setLoad(true);
     await api
       .get(`/task/filter/${filter}/00:11:22:33:44:55`)
@@ -32,6 +32,10 @@ const Home = ({ actived }) => {
 
   function Notification() {
     setFilter("late");
+  }
+
+  function AddTask(){
+    navigation.navigate('Task');
   }
 
   useEffect(() => {
@@ -92,13 +96,14 @@ const Home = ({ actived }) => {
                 title={item.title}
                 when={item.when}
                 type={item.type}
+                key={item.id}
               />
             )}
             keyExtractor={(item) => item.id}
           />
         )}
       </S.Scroll>
-      <Footer icon={"add"} />
+      <Footer icon={"add"} onPress={AddTask}/>
     </S.Container>
   );
 };

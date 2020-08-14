@@ -9,11 +9,11 @@ import DateTimeInput from '../../components/DateTimeInput';
 import * as S from './styles';
 import typeIcons from '../../utils/typeIcons';
 
-const Task = () => {
+const Task = ({navigation}) => {
   const [done, setDone] = useState(false);
   return (
      <S.Container>
-      <Header showBack={true}/>
+      <Header showBack={true} navigation={navigation}/>
         <S.Form>
             <S.ViewType>
               { 
