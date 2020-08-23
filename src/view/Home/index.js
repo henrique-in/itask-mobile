@@ -8,13 +8,15 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import TaskCard from "../../components/TaskCard";
 
+console.ignoredYellowBox
+
 const Home = ({ actived, navigation }) => {
   const [filter, setFilter] = useState("today");
   const [tasks, setTasks] = useState([]);
   const [load, setLoad] = useState(false);
   const [lateCount, setLateCount] = useState();
 
-  async function loadTasks({}) {
+  async function loadTasks() {
     setLoad(true);
     await api
       .get(`/task/filter/${filter}/00:11:22:33:44:55`)

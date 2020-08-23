@@ -5,7 +5,9 @@
     "ios": "react-native run-ios",
     "web": "expo start --web",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "adb": "adb reverse tcp:9090 tcp:9090 && adb reverse tcp:3000 tcp:3000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:8081 tcp:8081",
+    "menu": "adb shell input keyevent 82"
   },
   "dependencies": {
     "@react-native-community/datetimepicker": "^3.0.0",

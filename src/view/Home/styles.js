@@ -10,7 +10,7 @@ export const Container = styled.View`
 
 export const Scroll = styled.View`
   width: 100%;
-  height: 65%;
+  height: 66%;
   align-items: center;
   margin-top: 15px;
 `;

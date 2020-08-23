@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import { Alert } from 'react-native';
 
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -9,11 +9,24 @@ import * as S  from './styles';
 import iconCalendar from '../../assets/icons/calendar-alt.png';
 import iconClock from '../../assets/icons/clock.png';
 
-const DateTimeInput = ({type}) => {
-   const [dateTime, SetDateTime] = useState();
+const DateTimeInput = ({type, save, dated, hour}) => {
+   const [dateTime, setDateTime] = useState();
    const [date, setDate] = useState(new Date());
    const [mode, setMode] = useState("date");
    const [show, setShow] = useState(false);
+   const [dateNow, setDateNow] = useState(new Date());
+
+  useEffect(() => {
+    if (type === 'date' && dated) {
+      setDateTime(format(new Date(dated), 'dd/MM/yyyy'));
+      save(format(new Date(dated), 'yyyy-MM-dd'));
+    }
+    if (type === 'time' && hour) {
+      setDateTime(format(new Date(hour), 'HH:mm'));
+      save(format(new Date(hour), 'HH:mm:ss'));
+    }
+  }, []);
+
    
     const onChange = (event, selectedDate) => {
       const currentDate = selectedDate;
@@ -72,6 +85,7 @@ const DateTimeInput = ({type}) => {
           is24Hour={true}
           display="default"
           onChange={onChange}
+          minunumDate={new Date()}
         />
       )}
     </>

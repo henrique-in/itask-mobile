@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { FlatList } from 'react-native';
+
 
 export const Container = styled.KeyboardAvoidingView`
   flex: 1;
@@ -32,6 +32,8 @@ export const TypeIcon = styled.Image`
   width: 45px;
   height: 45px;
   margin: 10px 10px;
+
+
 `;
 
 export const Label = styled.Text`

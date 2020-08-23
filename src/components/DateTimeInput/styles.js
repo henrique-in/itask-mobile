@@ -15,6 +15,7 @@ export const Icon = styled.Image`
 
 export const Label = styled.TextInput`
   font-size: 18px;
+  color:#000;
   padding: 10px;
   width: 95%;
   border-bottom-width: 1px;

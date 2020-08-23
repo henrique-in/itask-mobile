@@ -6,6 +6,7 @@ import SplashScreen from "react-native-splash-screen";
 
 import Routes from "./src/routes/routes";
 
+
 export default function App() {
   useEffect(() => {
     setTimeout(() => {
